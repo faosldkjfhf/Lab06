@@ -14,13 +14,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:id="@+id/image1"
-        android:contentDescription="@string/playboi"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@drawable/playboicarti"
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image1"
+            android:contentDescription="@string/playboi"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/playboicarti" />
+        <ImageView
+            android:contentDescription="@string/hello"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
