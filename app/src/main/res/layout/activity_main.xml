@@ -45,8 +45,53 @@
             android:contentDescription="@string/hello"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/Baby_LlamaZ" />
+            android:src="@drawable/babyllama" />
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout">
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:layout_marginEnd="100dp"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textSize="25sp"
+            android:layout_marginEnd="100dp"/>
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textSize="25sp"
+            android:layout_marginEnd="100dp"/>
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CB67C9"
+        android:text="@string/quit"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
