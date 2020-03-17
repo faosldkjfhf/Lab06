@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.SurfaceControl;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -114,3 +116,5 @@ public class MainActivity extends AppCompatActivity {
         text4.setText(String.valueOf(sharedPreferences.getInt("llama", 0)));
     }
 }
+
+
