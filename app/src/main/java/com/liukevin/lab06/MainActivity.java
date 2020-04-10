@@ -14,6 +14,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
+
+import com.google.gson.Gson;
+
 import java.util.Random;
 import java.util.Timer;
 
@@ -100,8 +103,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Random rnd = new Random();
                 int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+                Gson gson = new Gson();
+                ColorP p = new ColorP(color);
+                String json = gson.toJson(p);
+                json = json.substring(9, json.length() -2);
                 TextView textView = (TextView)v;
-                textView.setTextColor(color);
+                textView.setTextColor(Integer.parseInt(json));
             }
         });
 
@@ -115,6 +122,18 @@ public class MainActivity extends AppCompatActivity {
         text3.setText(String.valueOf(sharedPreferences.getInt("creeper", 0)));
         text4.setText(String.valueOf(sharedPreferences.getInt("llama", 0)));
     }
+
+    public class ColorP{
+        int color;
+
+        public ColorP(int col) {
+            color = col;
+        }
+    }
+
 }
+
+
+
 
 
