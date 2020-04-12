@@ -12,4 +12,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="would_you_like_to_exit">Would you like to exit?</string>
     <string name="no">No</string>
+    <string name="thanks">Thank you for voting</string>
 </resources>

@@ -2,15 +2,18 @@ package com.liukevin.lab06;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
+import android.app.Fragment;
 
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.SurfaceControl;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
@@ -20,7 +23,7 @@ import com.google.gson.Gson;
 import java.util.Random;
 import java.util.Timer;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BlankFragment.OnFragmentInteractionListener{
 
     ImageView image1;
     ImageView image2;
@@ -44,18 +47,10 @@ public class MainActivity extends AppCompatActivity {
         image3 = findViewById(R.id.image3);
         image4 = findViewById(R.id.image4);
         text = findViewById(R.id.title);
-        quit = findViewById(R.id.quit);
         text1 = findViewById(R.id.text1);
         text2 = findViewById(R.id.text2);
         text3 = findViewById(R.id.text3);
         text4 = findViewById(R.id.text4);
-
-        quit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finishAffinity();
-            }
-        });
 
         image1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
         text2.setText(String.valueOf(sharedPreferences.getInt("steve", 0)));
         text3.setText(String.valueOf(sharedPreferences.getInt("creeper", 0)));
         text4.setText(String.valueOf(sharedPreferences.getInt("llama", 0)));
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri position) {
+
     }
 
     public class ColorP{
