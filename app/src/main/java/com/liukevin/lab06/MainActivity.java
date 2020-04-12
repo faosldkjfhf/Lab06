@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     TextView text4;
     SharedPreferences sharedPreferences;
     TextView text;
-    Button quit;
     SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
